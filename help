@@ -1,0 +1,45 @@
+LOBster is a Low-level Voice Intercept signal editor for near real-time VHF communications tracking.
+
+1. Preferences
+Preferences define how the data is viewed, time zone, the declination diagram and criteria for cuts. Signals are always stored using True North for Lines of Bearing and Zulu time for Time Up. But users can define whether to enter azimuths and time in True, Grid or Magnetic and Zulu or local respectively. The preferences can be modified by hand through editing of the LOBster configuration file, lobster.conf or through the Preferences Panel under Edit.
+
+2. Entering Data
+Signals of Interest (SOI) define an emitter, a signal with a Time Up, RF, and conversation (including callsigns) as well as one or more sites that collected on the SOI and any associated geolocation if possible. 
+
+NOTE: as an emitter, the SOI is a single source, i.e. one side of a conversation. Users can designate two or more sois as a conversation. See below
+
+2.a Entering Site Data
+There are four site entries: TU, Name, Location and LOB. TU is the time the site was set up and began collecting. Name is a 1 to 5 character name of the site. Location is the MGRS grid location of the site. These three pieces of information should be entered at start of collection. the operator can lock a site, which disables editing of these pieces of information inadvertently and disables their focus when the operator presses tab. the operator can also remove a site. NOTE: a site is given 'priority' based on the order it is entered. LOBs for each site are entered for each signal. Note that at present only one LOB per signal can be entered. Users can cycle through the LOB entry fields with the up and down arrow key for faster data entry. Only those sites with entered LOBs will be saved for the corresponding SOI.
+
+2.b Entering Signal of Interest Data
+The SOI has a DTG broken into Date of collection and TU of signal, RF, Gist and any operator notes. LOBster will initialize the Date to today and TU to current time (based on system settings). Users can click the clock icon to insert the current time or modify the time themselves. Users can also highlight any word in the Gist and by clicking the Callsign button, specify that word as a callsign (or delete it as a callsign). 
+
+2.c Data Entry
+LOBster is designed to minimize the time an operator spends writing data. Once the initial setup, i.e. storing Site details, is complete there is a minimal of data entry required as well as shortcuts to speed up data entry. The down and up arrow keys will focus through LOB fields (skipping any empty site rows), the RF field, Gist, Note and Enter, meaning the operator can quickly enter data and efficiently cycle through entry fields using only the keyboard (this is helpful, when using a small portable laptop, GoBook).  The minimum required data for a SOI is at least one site with a LOB and a RF, Date and TU.
+
+When the operator completes data entry, the data is stored as proprietary green 6 (g6) file internally. Details about the SOI are reflected in the green 6 list which show the generated ID, the sites that collected, TU, RF and geolocation status. The operator can select one of these and delete it, view/edit the data (see Section 3) or view a mapping of the SOI.
+
+NOTE: Geolocation is composed of a set of cuts between all possible pairings of sites. If each cut is within the specified threshold (in preferences) distance from each other than a fix is identified. 
+
+3. Viewing/Editing Entered Data
+LOBster provides three views of entered data. One the list view discussed above shows basic information about every signal entered. The operator can use key shortcuts: d -> delete the SOI, e -> view/edit the SOI or m -> view mapping of the SOI or right click on the signal and using the context menu. The other two are discussed in the following sections.
+
+3.a SOIPanel
+The SOIPanel gives a more indepth view of the SOI and provides minimal editing capabilities. The operator can change the Date, TU, RF, Gist (including adding/deleting callsigns) and OP Note. The operator cannot however modify site details such as location or LOB. If an SOI is entered with a wrong site location or LOB the operator must reenter the correct values in the main panel and delete the incorrect signal.
+
+3.b MapPanel
+The MapPanel shows the SOI on a map depicting the sites, LOBs and any geolocation of the SOI. At present, LOBster does not have imagery/background map capabilities but will show the MGRS gridlines. The mapping can be zoomed in, zoomed out, annotated, show a quadrant (see below) and saved.
+
+4. Saving, Loading and Exporting Data
+Data can be saved, loaded or exported to a comma separated file
+
+5. Utilities
+LOBster also provides some basic utilities (independent of entered SOIs)
+
+Convert: convert a MGRS to Lat/Lon or vise-versa
+
+Distance: find distance and azimuth between two points
+
+Cut: find the cut (if any) between two points with associated bearings
+
+Quadrant: find the quadrant (if any) between two points with associated bearings. A quadrant is the area surrounding a cut given a degree of error (in this utility 3 degrees) in the LOBs
