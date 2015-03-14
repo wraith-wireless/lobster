@@ -1,6 +1,5 @@
 ![](img/lobster-logo2.png?raw=true)
-# LOBster: a Low-level Voice Intercept (LLVI) signal editor for near real-time
-VHF communications tracking.
+# LOBster: a Low-level Voice Intercept (LLVI) signal editor for near real-time VHF communications tracking.
 
 ## 1 DESCRIPTION:
 LOBster was designed to run on a gobook or netbook to alleviate errors in DFing
