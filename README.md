@@ -1,17 +1,23 @@
 ![](img/lobster-logo2.png?raw=true)
-# LOBster: a Low-level Voice Intercept signal editor for near real-time VHF communications tracking.
+# LOBster: a Low-level Voice Intercept (LLVI) signal editor for near real-time
+VHF communications tracking.
 
 ## 1 DESCRIPTION:
-LOBster was designed to alleviate errors in DFing inherent in human plotting
-specifically on maps of 1:50000 by attempting to siimplify the collation of
-multiple LOBs from one or more non-colocated collection sites. The next logical
-evolution which I have not got around to developing is to use gps devices to
-ascertain the current position (allowing sites to move without manually entering
-the new location) and to implement an adhoc wireless network facilitating the
-entry of LOBs from other sites without require some external communication method
-and manual entry.
+LOBster was designed to run on a gobook or netbook to alleviate errors in DFing
+Lines of Bearing (LOBs) from multiple sites inherent in human plotting
+(specifically on maps of 1:50000) by attempting to simplify the collation of
+multiple LOBs from one or more non-colocated collection sites.
 
-This program as is has been tested and applied in real-world situations with
+The next logical evolution which I have not got around to developing (and probably
+will not for the forseeable future) is to:
+ * use gps devices to ascertain the current position (allowing sites to move
+   without manually entering the new location)
+ * implement an adhoc wireless network automating the entry of LOBs from other
+   sites without requiring some external communication method and manual entry
+ * downloadable maps and local tileserver (the area this this program was tested
+   in did not have freely available maps of quality)
+
+This program (as is) has been tested and applied in real-world situations with
 success.
 
 ## 2. REQUIREMENTS: 
